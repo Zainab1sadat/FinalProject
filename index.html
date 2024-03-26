@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+    <div class="bg-white p-7 m-6 rounded-md shadow-lg md:container md:mx-auto">
+        <div class="titleSection flex flex-row mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 text-green-500">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+            <h1 class="font-sans text-2xl ml-3">Shopping List</h1>
+        </div>
+        <form action="" class="text-center flex flex-row" id="form">
+            <input type="text" placeholder="Enter" class="border border-slate-500 p-1 rounded-md mr-2" id="textInput">
+            <select name="dropdown" id="dropdown" class="border border-slate-500 p-1 rounded-md mr-2">
+                <option value=""></option>
+                <option value="fruit">fruit</option>
+                <option value="Vagetables">Vagetables</option>
+                <option value="dairy">dairy</option>
+            </select>
+            <button type="submit"
+                class="bg-gradient-to-r from-green-400 to-blue-500 px-5 py-1 border border-slate-500 rounded-md text-white">Add</button>
+        </form>
+        <div class="itemsDiv py-5">
+            <ul id="list-items">
+                <!-- <li class="my-2 border-b-2">
+                    <span class="mr-2">➡</span>
+                    Apple
+                    <span class="rounded-md bg-orange-400 px-1 text-white">fruit</span>
+                </li>
+                <li class="my-2 border-b-2">
+                    <span class="mr-2">➡</span>
+                    Carrot 
+                    <span class="rounded-md bg-yellow-400 px-1 text-white">Vagetables</span>
+                </li>
+                <li class="my-2 border-b-2">
+                    <span class="mr-2">➡</span>
+                    Milk 
+                    <span class="rounded-md bg-gray-400 px-1 text-white">dairy</span>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

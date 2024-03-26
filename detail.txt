@@ -1,0 +1,45 @@
+✏️ Step-by-step Requirements
+
+
+Deleting a list item
+
+Write an event listener so that when the <span> tag that contains the emoji (in the example, it is the right arrow ➡️ emoji), its list item is deleted. To do this, you will need to learn something about event delegation. Please refer to this YouTube video (or downloadable video) about event delegation before continuing.
+
+
+
+
+Remove the list item by using .remove(). Learn more about .remove() by playing around with it here: https://www.w3schools.com/jsref/met_element_remove.asp. 
+
+Test the application by trying to add a bunch of items and then remove them.
+
+Local Storage and using Array
+
+Now that you can add and delete items, it is time to use local storage so that the items are always saved, even when you refresh the page.
+
+In Assignment 5, you were instructed to add three list items in the HTML. Remove the three list items so that there are no list items in the beginning. When you refresh the page, it should look something like the screenshot below.
+
+
+Create an empty array named list at the very top of your JavaScript file. This is where you will save your list of items. 
+
+In your add function, write additional code so that:
+
+The newly created item is added to the list array as an object. It is useful to use an object here since each list item has name and category (dropdown). 
+
+Convert the list array into a JSON string and save it into the local storage.
+
+Make sure that the new list item is displayed on the browser.
+
+When you refresh the page at this point, you will see that the list items don't show in the browser. Write code so that upon page load, you retrieve the list items from the local storage, convert it into JavaScript, set it to the list array, and display the list items on the browser.
+
+Test the app by refreshing the page to see that the new items aren't removed and are still displayed in the browser. Check your browser's local storage to ensure that the local storage is storing the list items.
+
+
+Now let's handle deleting list items. After you remove a list item from the browser, you also need to update the list array to remove that item. Write code so that when an item is removed, the list array is updated and then saved into local storage.
+
+This will be the most challenging part of the final project. You will need to look up resources on the Internet to find a way to achieve this with the remove code you already have.
+
+Hint: since we are using event delegation to remove an item, you have access to #list-item's children. You can get an index of a parent's children elements.
+
+Double-check that everything is working.
+
+Don't forget to validate all your code. Your HTML, CSS and JavaScript must be valid.
