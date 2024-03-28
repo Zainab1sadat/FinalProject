@@ -84,7 +84,7 @@ function add(){
                     default:
                         break;
                 }
-                // document.querySelector(".itemsDiv #list-items").appendChild(listItemElement);
+                document.querySelector(".itemsDiv #list-items").appendChild(listItemElement);
             }
         }
 
