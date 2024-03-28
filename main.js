@@ -1,46 +1,5 @@
-
 let List = [];
-
 let listStorage = localStorage.getItem("list");
-
-if (listStorage) {
-    console.log(listStorage);
-    let listArray = JSON.parse(listStorage);
-
-    console.log(listArray);
-    List = listArray;
-
-    for(let i = 0; i < List.length; i++) {
-        let listItem = List[i];
-        let listItemElement = document.createElement("li");
-        let emojiElement = document.createElement("span");
-        let listDropElement = document.createElement("span");
-
-        let listItemText = listItem.TextInput; 
-        let listDropText = listItem.DropInput;
-
-        emojiElement.textContent ="➡ ";
-        listItemElement.textContent = listItemText;
-        listDropElement.textContent = listDropText;
-        listItemElement.append(listDropElement);
-        listItemElement.classList.add("my-2","border-b-2")
-
-        switch (listDropText) {
-            case "fruit":
-                listDropElement.classList.add("rounded-md","bg-orange-400","px-1","ml-2","text-white");
-                break;
-            case "Vagetables": 
-                listDropElement.classList.add("rounded-md","bg-yellow-400","px-1","ml-2","text-white");
-                break;
-            case "dairy":
-                listDropElement.classList.add("rounded-md","bg-gray-400","px-1","ml-2","text-white");
-                break;
-            default:
-                break;
-        }
-        document.querySelector(".itemsDiv #list-items").appendChild(listItemElement);
-    }
-}
 
 // Button Add function
 document.querySelector('button').onclick = function(e){
@@ -85,13 +44,55 @@ function add(){
             default:
                 break;
         }
+        
+        List.push({TextInput,DropInput});
+        localStorage.setItem("list",JSON.stringify(List));
+
+        if (listStorage) {
+            console.log(listStorage);
+            let listArray = JSON.parse(listStorage);
+        
+            console.log(listArray);
+            List = listArray;
+        
+            for(let i = 0; i < List.length; i++) {
+                let listItem = List[i];
+            
+                let listItemElement = document.createElement("li");
+                let emojiElement = document.createElement("span");
+                let listDropElement = document.createElement("span");
+        
+                let listItemText = listItem.TextInput; 
+                let listDropText = listItem.DropInput;
+        
+                emojiElement.textContent ="➡ ";
+                listItemElement.textContent = listItemText;
+                listDropElement.textContent = listDropText;
+                listItemElement.append(listDropElement);
+                listItemElement.classList.add("my-2","border-b-2")
+        
+                switch (listDropText) {
+                    case "fruit":
+                        listDropElement.classList.add("rounded-md","bg-orange-400","px-1","ml-2","text-white");
+                        break;
+                    case "Vagetables": 
+                        listDropElement.classList.add("rounded-md","bg-yellow-400","px-1","ml-2","text-white");
+                        break;
+                    case "dairy":
+                        listDropElement.classList.add("rounded-md","bg-gray-400","px-1","ml-2","text-white");
+                        break;
+                    default:
+                        break;
+                }
+                // document.querySelector(".itemsDiv #list-items").appendChild(listItemElement);
+            }
+        }
+
     }else{
         console.log("Invalid inputs");
     }
 
     
-    List.push({TextInput,DropInput});
-    localStorage.setItem("list",JSON.stringify(List));
 }
 
 // Validate function
