@@ -45,8 +45,8 @@ function add(){
                 break;
         }
         
-        List.push({TextInput,DropInput});
-        localStorage.setItem("list",JSON.stringify(List));
+        // List.push({TextInput,DropInput});
+        // localStorage.setItem("list",JSON.stringify(List));
 
         if (listStorage) {
             console.log(listStorage);
@@ -87,6 +87,8 @@ function add(){
                 document.querySelector(".itemsDiv #list-items").appendChild(listItemElement);
             }
         }
+        List.push({TextInput,DropInput});
+        localStorage.setItem("list",JSON.stringify(List));
 
     }else{
         console.log("Invalid inputs");
